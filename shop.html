@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <header>
+        <img src="ATA.png" alt="ATA Logo">
+        <nav>
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop Gear</a></li>
+                <li><a href="about.html">Our Team</a></li>
+                <li><a href="faq.html">Support</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="product.html">Featured Item</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Product Catalog</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th><th>Item Name</th><th>Material</th><th>Price (ZAR)</th><th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Watches</td><td>Aeterna Gold Smartwatch</td><td>Sapphire & Gold</td><td>R 4,500.00</td><td><button onclick="showToast()">Buy</button></td></tr>
+                <tr><td>Earrings</td><td>Titanium Tech Hoops</td><td>Grade 5 Titanium</td><td>R 950.00</td><td><button onclick="showToast()">Buy</button></td></tr>
+                <tr><td>Joysticks</td><td>ATA Precision Controller</td><td>Reinforced Carbon</td><td>R 1,200.00</td><td><button onclick="showToast()">Buy</button></td></tr>
+                <tr><td>Earphones</td><td>Endure Wireless Buds</td><td>Waterproof Polymer</td><td>R 1,800.00</td><td><button onclick="showToast()">Buy</button></td></tr>
+                <tr><td>Chargers</td><td>Infinity Fast-Charge Dock</td><td>Brushed Aluminum</td><td>R 650.00</td><td><button onclick="showToast()">Buy</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="cart-toast" style="visibility:hidden; background:#d4af37; color:black; padding:15px; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); font-weight:bold; border-radius:5px;">🛒 Item Added!</div>
+    
+    <script>
+        function showToast(){
+            var x = document.getElementById('cart-toast');
+            x.style.visibility = 'visible';
+            setTimeout(function(){ 
+                x.style.visibility = 'hidden'; 
+                window.location.href = 'contact.html'; 
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
